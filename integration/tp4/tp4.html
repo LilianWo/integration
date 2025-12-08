@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 4 - Sélecteurs & Pseudo-Classes</title>
+    
+    <link rel="stylesheet" href="../global.css"> 
+    <link rel="stylesheet" href="../tp4/tp4.css">
+    
+</head>
+<body>
+    
+    <header>
+        <div class="brand">
+            <a href="../index.html">Lilian.Wojeik</a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../tp1/tp1.html">TP 1</a></li>
+                <li><a href="../tp2/tp2.html">TP 2</a></li>
+                <li><a href="../tp3/tp3.html">TP 3</a></li>
+                <li><a href="../tp4/tp4.html" class="active">TP 4</a></li>
+                <li><a href="../tp5/tp5.html">TP 5</a></li>
+                <li><a href="../tp6/tp6.html">TP 6</a></li>
+                <li><a href="../tp7/tp7.html">TP 7</a></li>
+                <li><a href="../tp8/tp8.html">TP 8</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section class="exo-step theme-light">
+            <div class="exo-content align-left">
+                <div class="exo-render">
+                    <h2>TP 4 - Exercice 1 :</h2>
+                    
+                    <div id="exo1_container">
+                        <ul>
+                            <li><a href="#paragraphe1">Paragraphe 1</a></li>
+                            <li><a href="#paragraphe2">Paragraphe 2</a></li>
+                            <li><a href="#paragraphe3">Paragraphe 3</a></li>
+                        </ul>
+                        
+                        <div id="paragraphe1">
+                            <h2>Paragraphe 1</h2>
+                            <p>
+                            	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac felis enim. Aenean varius augue nec leo viverra non eleifend neque interdum. Curabitur pretium dictum tortor, eget malesuada purus convallis sed. Morbi eget accumsan sapien. Phasellus ornare lacinia magna, et placerat justo dapibus at. Donec eleifend porttitor augue ut egestas. Vivamus porta aliquet lectus, vel fermentum diam consequat vel. Etiam pulvinar dignissim orci, non dapibus lectus fringilla a. Donec ligula dolor, fringilla nec porttitor nec, ultricies a purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus et massa at massa euismod faucibus non at risus. Curabitur sed nunc justo. Sed sed justo lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque a bibendum diam. Morbi in justo est. Aenean elit turpis, molestie ut facilisis sed, congue non dui.<br />
+		Morbi vel enim nisi, convallis pharetra ligula. Nunc mauris dui, pharetra non tempus ac, tincidunt quis est. Fusce nec metus vitae nulla fringilla convallis. Fusce vitae nulla ligula. Quisque convallis turpis orci, a adipiscing sem. Duis odio elit, vehicula et porttitor at, gravida non ante. Aliquam eu dignissim velit. Curabitur neque leo, pharetra vel rutrum id, convallis a ligula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque magna dui, condimentum non placerat ut, commodo nec nunc. Nullam et elit felis. Nullam vel nulla non turpis iaculis tincidunt dapibus sit amet turpis. Proin id lectus iaculis turpis vestibulum pharetra ut et velit. Pellentesque metus dolor, cursus non commodo at, tempus et libero. Quisque nisi enim, ultrices ultricies cursus in, volutpat sed orci. Quisque vel tempor libero.<br />
+		Maecenas commodo elit non neque lobortis congue ornare ac libero. Phasellus a imperdiet lorem. Donec posuere hendrerit fringilla. In lacus urna, vehicula ut bibendum eu, dictum in turpis. Maecenas viverra consectetur est nec cursus. Aliquam eu gravida urna. Curabitur a leo ut metus viverra auctor vitae id turpis. Quisque erat quam, egestas sed euismod et, tristique vitae sem. Etiam varius dui at est aliquam pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus eget leo magna, molestie vestibulum nulla. Etiam rutrum accumsan dignissim. Sed dictum convallis orci in lacinia. 
+                            </p>
+                        </div>
+                        <div id="paragraphe2">
+                            <h2>Paragraphe2</h2>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac felis enim. Aenean varius augue nec leo viverra non eleifend neque interdum. Curabitur pretium dictum tortor, eget malesuada purus convallis sed. Morbi eget accumsan sapien. Phasellus ornare lacinia magna, et placerat justo dapibus at. Donec eleifend porttitor augue ut egestas. Vivamus porta aliquet lectus, vel fermentum diam consequat vel. Etiam pulvinar dignissim orci, non dapibus lectus fringilla a. Donec ligula dolor, fringilla nec porttitor nec, ultricies a purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus et massa at massa euismod faucibus non at risus. Curabitur sed nunc justo. Sed sed justo lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque a bibendum diam. Morbi in justo est. Aenean elit turpis, molestie ut facilisis sed, congue non dui.<br />
+		Morbi vel enim nisi, convallis pharetra ligula. Nunc mauris dui, pharetra non tempus ac, tincidunt quis est. Fusce nec metus vitae nulla fringilla convallis. Fusce vitae nulla ligula. Quisque convallis turpis orci, a adipiscing sem. Duis odio elit, vehicula et porttitor at, gravida non ante. Aliquam eu dignissim velit. Curabitur neque leo, pharetra vel rutrum id, convallis a ligula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque magna dui, condimentum non placerat ut, commodo nec nunc. Nullam et elit felis. Nullam vel nulla non turpis iaculis tincidunt dapibus sit amet turpis. Proin id lectus iaculis turpis vestibulum pharetra ut et velit. Pellentesque metus dolor, cursus non commodo at, tempus et libero. Quisque nisi enim, ultrices ultricies cursus in, volutpat sed orci. Quisque vel tempor libero.<br />
+		Maecenas commodo elit non neque lobortis congue ornare ac libero. Phasellus a imperdiet lorem. Donec posuere hendrerit fringilla. In lacus urna, vehicula ut bibendum eu, dictum in turpis. Maecenas viverra consectetur est nec cursus. Aliquam eu gravida urna. Curabitur a leo ut metus viverra auctor vitae id turpis. Quisque erat quam, egestas sed euismod et, tristique vitae sem. Etiam varius dui at est aliquam pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus eget leo magna, molestie vestibulum nulla. Etiam rutrum accumsan dignissim. Sed dictum convallis orci in lacinia. 
+                            </p>
+                        </div>
+                        <div id="paragraphe3">
+                            <h2>Paragraphe3</h2>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac felis enim. Aenean varius augue nec leo viverra non eleifend neque interdum. Curabitur pretium dictum tortor, eget malesuada purus convallis sed. Morbi eget accumsan sapien. Phasellus ornare lacinia magna, et placerat justo dapibus at. Donec eleifend porttitor augue ut egestas. Vivamus porta aliquet lectus, vel fermentum diam consequat vel. Etiam pulvinar dignissim orci, non dapibus lectus fringilla a. Donec ligula dolor, fringilla nec porttitor nec, ultricies a purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus et massa at massa euismod faucibus non at risus. Curabitur sed nunc justo. Sed sed justo lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque a bibendum diam. Morbi in justo est. Aenean elit turpis, molestie ut facilisis sed, congue non dui.<br />
+		In hac habitasse platea dictumst. Sed et luctus mi. Maecenas non purus leo, vitae gravida purus. Duis feugiat nisi accumsan dolor vestibulum interdum quis a enim. Fusce luctus, ligula et aliquam viverra, leo risus hendrerit risus, vitae suscipit quam augue sed erat. Aliquam massa dolor, ultrices vel scelerisque at, accumsan at lectus. Vestibulum ac ornare libero. Integer metus elit, sodales in blandit at, laoreet vitae dui. Phasellus bibendum luctus arcu, eget laoreet risus facilisis id. Cras vehicula, magna quis volutpat aliquet, est risus commodo nunc, eu egestas neque libero a dui. Nam dolor nunc, condimentum nec sollicitudin ac, lacinia nec nunc. Nam a nunc ac augue lobortis molestie. Ut et elit at tellus imperdiet porta. Vivamus ut velit eget mi lacinia faucibus sit amet non elit. Duis posuere dui eu sem commodo consequat. Praesent condimentum scelerisque sapien, nec fermentum dui eleifend vel. Cras pretium suscipit volutpat. Etiam tempus, libero interdum condimentum condimentum, nunc leo consectetur diam, vel rutrum erat orci vel nisl. Aenean condimentum condimentum tellus, vitae adipiscing metus tristique ac. Nulla facilisi.<br />
+		Morbi vel enim nisi, convallis pharetra ligula. Nunc mauris dui, pharetra non tempus ac, tincidunt quis est. Fusce nec metus vitae nulla fringilla convallis. Fusce vitae nulla ligula. Quisque convallis turpis orci, a adipiscing sem. Duis odio elit, vehicula et porttitor at, gravida non ante. Aliquam eu dignissim velit. Curabitur neque leo, pharetra vel rutrum id, convallis a ligula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque magna dui, condimentum non placerat ut, commodo nec nunc. Nullam et elit felis. Nullam vel nulla non turpis iaculis tincidunt dapibus sit amet turpis. Proin id lectus iaculis turpis vestibulum pharetra ut et velit. Pellentesque metus dolor, cursus non commodo at, tempus et libero. Quisque nisi enim, ultrices ultricies cursus in, volutpat sed orci. Quisque vel tempor libero.<br />
+		Pellentesque sed orci tortor. Nam tincidunt purus in dui sollicitudin egestas. Curabitur laoreet, nisl id dapibus iaculis, odio neque ornare erat, sit amet tincidunt massa mi scelerisque risus. In iaculis urna et diam imperdiet cursus. Quisque imperdiet eros non nisi gravida euismod lobortis ipsum pellentesque. Aenean suscipit sem sed eros ultricies viverra rutrum ligula ornare. Phasellus ac faucibus justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus non laoreet orci. Fusce vestibulum tincidunt velit, eu tincidunt nunc convallis id. Aliquam erat volutpat. Suspendisse massa diam, egestas ut pellentesque sed, sodales sit amet erat. Proin eget lacus justo. Fusce eu lorem ut velit ultrices ultricies. Cras nec justo elit, sed scelerisque risus.<br />
+		Maecenas commodo elit non neque lobortis congue ornare ac libero. Phasellus a imperdiet lorem. Donec posuere hendrerit fringilla. In lacus urna, vehicula ut bibendum eu, dictum in turpis. Maecenas viverra consectetur est nec cursus. Aliquam eu gravida urna. Curabitur a leo ut metus viverra auctor vitae id turpis. Quisque erat quam, egestas sed euismod et, tristique vitae sem. Etiam varius dui at est aliquam pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus eget leo magna, molestie vestibulum nulla. Etiam rutrum accumsan dignissim. Sed dictum convallis orci in lacinia.
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+                <div class="exo-analysis">
+                    <h3>Analyse & Commentaires</h3>
+                    <p>Cet exercice est particulièrement intéressant et utile car il montre comment le CSS peut gérer l'interaction utilisateur. L'utilisation de la pseudo-classe :target permet de faire apparaître ou disparaître des éléments sur une page suite à un simple clic sur un lien, sans nécessiter de JavaScript pour cette fonctionnalité de base. Ce concept est essentiel pour rendre les pages plus dynamiques, comme pour afficher des modals, des onglets ou des contenus cachés, ce qui pousse fortement à l'interaction.</p>
+                    <h4>Niveau de Difficulté : 3/5 ⭐⭐⭐</h4>
+
+                    <div class="difficulty-indicator" id="difficulty-exo2">
+                    <div class="level level-4"></div>
+    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="exo-step theme-dark">
+            <div class="exo-content align-right">
+                <div class="exo-render">
+                    <h2>TP 4 - Exercice 2 :</h2>
+                    
+                    <div id="exo2_container">
+                        <h1>Une liste de documents à télécharger</h1>
+                        <ul id="telechargement">
+                            <li><a href="unDocumentpdf.pdf" hreflang="fr"></a></li> 
+                            <li><a href="unDocumentWord.doc" hreflang="fr"></a></li>
+                            <li><a href="unDocumentExcel.xls" hreflang="en"></a></li>
+                            <li><a href="uneImagepng.png" hreflang="en"></a></li>
+                            <li><a href="unDocumentrtf.rtf" hreflang="fr"></a></li>
+                            <li><a href="uneArchivezip.zip" hreflang="fr"></a></li>
+                            <li><a href="uneImagesvg.svg" hreflang="en"></a></li>
+                            <li><a href="unfichierOOo.ods" hreflang="fr"></a></li>
+                            <li><a href="unfichierpowerPoint.ppt" hreflang="fr"></a></li>
+                        </ul>
+                    </div>
+                    </div>
+
+                <div class="exo-analysis">
+                    <h3>Analyse & Commentaires</h3>
+                    <p>Cet exercice est bien pensé et fondamental pour l'organisation et la mise en forme de listes d'informations, telles que des listes de téléchargement. Le concept de base (les sélecteurs d'attributs pour les icônes) est un truc basique qu'il faut absolument maîtriser. Cependant, il est vrai que cet exercice est moins créatif et donne moins d'idées d'animation ou d'interaction que l'exercice 1. La complexité réside principalement dans la gestion de nombreux sélecteurs d'attributs et dans l'alignement précis des pseudo-éléments (icônes et drapeaux), où l'on peut rapidement s'y perdre.</p>
+
+                    <h4>Niveau de Difficulté : 2/5 ⭐⭐</h4>
+                    <div class="difficulty-indicator" id="difficulty-exo2">
+                        <div class="level level-2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tp-section theme-light"> 
+            <h2 style="padding-left: 40px; margin-bottom: 20px;">Mes autres Travaux Pratiques</h2>
+            
+            <div class="tp-list-container" id="tpCarouselPage">
+                <a href="../tp1/tp1.html" class="tp-item"><h3>TP 1</h3><p>Tableau Flexbox récapitulatif.</p><p>2 Exercices</p></a>
+                <a href="../tp2/tp2.html" class="tp-item"><h3>TP 2</h3><p>Gestion des formulaires et des médias.</p><p>2 Exercices</p></a>
+                <a href="../tp3/tp3.html" class="tp-item"><h3>TP 3</h3><p>Initiation au positionnement CSS.</p><p>2 Exercices</p></a>
+                <a href="../tp5/tp5.html" class="tp-item"><h3>TP 5</h3><p>CSS Grid (Layout 2).</p><p>2 Exercices (Imposé)</p></a>
+                <a href="../tp6/tp6.html" class="tp-item tp-impose"><h3>TP 6 - Imposé</h3><p>Exercice de synthèse et Responsivité.</p><p>2 Exercices</p></a>
+                <a href="../tp7/tp7.html" class="tp-item"><h3>TP 7</h3><p>Animations et Transitions CSS.</p><p>2 Exercices</p></a>
+                <a href="../tp8/tp8.html" class="tp-item"><h3>TP 8</h3><p>Initiation au JavaScript vanilla.</p><p>2 Exercices</p></a>
+            </div>
+            
+            <div class="tp-carousel-controls">
+                <button id="prevBtnPage">← Précédent</button>
+                <button id="nextBtnPage">Suivant →</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 | Site réalisé par Lilian Wojeik dans le cadre du module d'Intégration Web.</p>
+    </footer>
+
+    <script src="../tp1/tp1.js"></script> 
+    
+</body>
+</html>

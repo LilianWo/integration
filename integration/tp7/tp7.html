@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 7 - Canvas et Dessin Vectoriel</title>
+    
+    <link rel="stylesheet" href="../global.css">  
+    <link rel="stylesheet" href="../tp7/tp7.css">
+</head>
+<body>
+    
+    <header>
+        <div class="brand">
+            <a href="../index.html">Lilian.Wojeik</a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../tp1/tp1.html">TP 1</a></li>
+                <li><a href="../tp2/tp2.html">TP 2</a></li>
+                <li><a href="../tp3/tp3.html">TP 3</a></li>
+                <li><a href="../tp4/tp4.html">TP 4</a></li>
+                <li><a href="../tp5/tp5.html">TP 5</a></li>
+                <li><a href="../tp6/tp6.html">TP 6</a></li>
+                <li><a href="../tp7/tp7.html" class="active">TP 7</a></li>
+                <li><a href="../tp8/tp8.html">TP 8</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section class="exo-step theme-light">
+            <div class="exo-content align-left">
+                
+                <div class="exo-render">
+                    <h2>TP 7 - Exercice 1 :</h2>
+                    
+                    <div id="exo1_canvas_container">
+                        <canvas id="canvas_unique" width="400" height="400"></canvas>
+                        
+                        <button id="nextFigureBtn">Figure Suivante (1/4) →</button>
+                    </div>
+                </div>
+
+                <div class="exo-analysis">
+                    <h3>Analyse & Commentaires</h3>
+                    <p>Cet exercice est fondamental car il constitue une initiation complète à l'API **HTML Canvas**, le moteur de dessin vectoriel par excellence côté client. La difficulté principale réside dans la maîtrise de la **logique mathématique et géométrique** requise pour chaque figure (calcul de boucles, manipulation des arcs et des chemins). La gestion du bouton de navigation illustre comment **JavaScript** interagit avec le Canvas pour le **rafraîchissement (`clearRect`)** et le contrôle d'état (boucle séquentielle).</p>
+
+                    <h4>Niveau de Difficulté : 4/5 ⭐⭐⭐⭐</h4>
+                    <div class="difficulty-indicator">
+                        <div class="level level-4"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="exo-step theme-dark">
+            <div class="exo-content align-right">
+                
+                <div class="exo-render">
+                    <h2>TP 7 - Exercice 2 :</h2>
+                    
+                    <div id="exo2_animation_container" style="text-align: center;">
+                        <canvas id="canvas_animation" width="400" height="400"></canvas>
+                    </div>
+                </div>
+
+                <div class="exo-analysis">
+                    <h3>Analyse & Commentaires</h3>
+                    <p>Cet exercice combine le dessin de figures (arcs, cercles) avec la mise en œuvre de la **boucle de rendu** d'animation (`requestAnimationFrame`). La principale difficulté réside dans le calcul des angles de l'arc de Pac-Man, qui doivent être dynamiques (`mouthAngle`) et synchronisés pour simuler l'ouverture/fermeture de la bouche de manière fluide. Ceci démontre la capacité à gérer l'état d'un objet (`mouthOpenness`) dans le temps pour créer un mouvement crédible.</p>
+
+                    <h4>Niveau de Difficulté : 3/5 ⭐⭐⭐</h4>
+                    <div class="difficulty-indicator">
+                        <div class="level level-3"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="tp-section theme-light"> 
+            <h2 style="padding-left: 40px; margin-bottom: 20px;">Mes autres Travaux Pratiques</h2>
+            
+            <div class="tp-list-container" id="tpCarouselPage">
+                <a href="../tp1/tp1.html" class="tp-item"><h3>TP 1</h3><p>Tableau Flexbox récapitulatif.</p><p>2 Exercices</p></a>
+                <a href="../tp2/tp2.html" class="tp-item"><h3>TP 2</h3><p>Gestion des formulaires et des médias.</p><p>2 Exercices</p></a>
+                <a href="../tp3/tp3.html" class="tp-item"><h3>TP 3</h3><p>Initiation au positionnement CSS.</p><p>2 Exercices</p></a>
+                <a href="../tp4/tp4.html" class="tp-item"><h3>TP 4</h3><p>Maîtrise de Flexbox (Layout 1).</p><p>2 Exercices</p></a>
+                <a href="../tp5/tp5.html" class="tp-item"><h3>TP 5</h3><p>CSS Grid (Layout 2).</p><p>2 Exercices (Imposé)</p></a>
+                <a href="../tp6/tp6.html" class="tp-item tp-impose"><h3>TP 6 - Imposé</h3><p>Exercice de synthèse et Responsivité.</p><p>2 Exercices</p></a>
+                <a href="../tp8/tp8.html" class="tp-item"><h3>TP 8</h3><p>Initiation au JavaScript vanilla.</p><p>2 Exercices</p></a>
+            </div>
+            
+            <div class="tp-carousel-controls">
+                <button id="prevBtnPage">← Précédent</button>
+                <button id="nextBtnPage">Suivant →</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 | Site réalisé par Lilian Wojeik dans le cadre du module d'Intégration Web.</p>
+    </footer>
+
+    <script src="../tp7/tp7.js"></script>
+    <script src="../tp1/tp1.js"></script> 
+    
+</body>
+</html>
