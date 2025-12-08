@@ -1,0 +1,116 @@
+/* ==================================================================== */
+/* Styles Spécifiques au TP 8 (Canvas JS) */
+/* ==================================================================== */
+
+/* --- Conteneur Général des Exercices (Bordure Pointillée Bleue) --- */
+/*
+  Nous appliquons la bordure bleue, le padding interne et l'arrière-plan 
+  aux conteneurs spécifiques #container-ex4 et #container-ex5.
+*/
+#container-ex4, #container-ex5 {
+    /* Style de bordure unifié (pointillé bleu) */
+    border: 2px dashed #3498db; 
+    padding: 15px; 
+    margin: 20px 0; /* Marge externe, mais nous utilisons 'margin: 20px 0' pour ne pas centrer ici */
+    background-color: white; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    /* Retire text-align: center car il est en conflit avec flexbox dans ex4 */
+}
+
+/* ==================================================================== */
+/* --- Exercice 4 : Pixel Picker --- */
+/* ==================================================================== */
+
+#container-ex4 {
+    /* Rétablit le layout Flexbox pour aligner Canvas et infos couleur */
+    display: flex;
+    align-items: flex-start; /* Aligner en haut pour un meilleur look */
+    gap: 20px;
+}
+#imageCanvas {
+    /* Taille définie en JS, mais le curseur ici est important */
+    border: 1px solid #ccc;
+    cursor: crosshair; 
+    display: block;
+}
+#colorDisplay {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #6c9a75;
+    background-color: #f0f0f0;
+}
+#colorInfo {
+    font-family: monospace;
+    font-size: 14px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 4px;
+    color: #333;
+}
+#colorInfo p {
+    margin: 2px 0;
+}
+
+/* ==================================================================== */
+/* --- Exercice 5 : Loupe (Zoom) --- */
+/* ==================================================================== */
+
+#container-ex5 {
+    /* Rendre le conteneur prêt à empiler ses éléments verticalement */
+    display: block; 
+    text-align: center; /* Pour centrer le Canvas principal et la loupe */
+
+    /* Le reste des styles de bordure bleue reste inchangé */
+    border: 2px dashed #3498db; 
+    padding: 15px; 
+    margin: 20px 0;
+    background-color: white; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+#mainCanvas {
+    /* Le Canvas principal reste le même */
+    border: 1px solid #ccc;
+    cursor: none; 
+    display: block;
+    margin: 0 auto 15px auto; /* Centrer et ajouter une marge en bas */
+}
+
+#magnifierCanvas {
+    /* CORRECTION CLÉ : Retirer le positionnement absolu */
+    position: static; /* Ou simplement supprimer la ligne position: absolute */
+    
+    /* Pour la faire apparaître sous forme de cercle, nous la centrons et ajoutons de la marge */
+    display: inline-block; /* Pour qu'elle réponde au text-align: center */
+    margin-top: 15px; /* Espace entre les deux Canvas */
+    
+    /* Styles du cercle conservés */
+    border: 3px solid #a8c080; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    pointer-events: none; 
+}
+
+/* Styles pour les conteneurs de la page globale (si non dans global.css) */
+.exo-render {
+    flex-basis: 55%; 
+    padding: 20px;
+    overflow: hidden; /* IMPORTANT pour s'assurer que rien ne déborde du cadre général */
+}
+
+.exo-analysis {
+    flex-basis: 40%;
+    padding: 20px;
+}
+
+.exo-analysis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.exo-analysis h4 {
+    margin-top: auto;
+    margin-bottom: 5px;
+}
