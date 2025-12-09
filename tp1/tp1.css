@@ -1,28 +1,17 @@
-/* ==================================================================== */
-/* --- STYLES COMMUNS (Bordure bleue pointillée pour le contenu) --- */
-/* ==================================================================== */
-
 .render-box-content.exo-border-container {
     border: 3px dashed #3498db; 
     padding: 20px;
     margin-top: 15px; 
     margin-bottom: 20px; 
-    /* Le fond noir de la boîte de rendu est conservé */
     background-color: #333; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
     position: relative; 
 }
 
-
-/* ==================================================================== */
-/* --- TP 1 : FLEXBOX RÉCAPITULATIF (ISOLÉ PAR #flex-recap-table-container) --- */
-/* ==================================================================== */
-
-/* Conteneur et header (Flex Container Properties) */
 #flex-recap-table-container header {
     display: flex;
     z-index: 0;
-    background-color: #CC0033; /* Rouge vif */
+    background-color: #CC0033; 
     color: white;
     position: static !important;
 }
@@ -60,7 +49,6 @@
     display: inline-flex;
 }
 
-/* Styles de la première section (Container Table) */
 #flex-recap-table-container table {
     border-collapse: collapse;
     width: calc(100% - 20px);
@@ -71,7 +59,7 @@
     border: solid 1px black;
     text-align: center;
     background-color: rgb(207, 204, 204);
-    color: rgb(10, 128, 108); /* Couleur verte pour les valeurs */
+    color: rgb(10, 128, 108); 
     padding: 5px;
 }
 
@@ -83,7 +71,7 @@
 }
 
 #flex-recap-table-container span {
-    color: #CC0033; /* Rouge pour les valeurs par défaut */
+    color: #CC0033; 
 }
 
 #flex-recap-table-container #couleur {
@@ -91,9 +79,6 @@
     color: white;
 }
 
-/* Styles de la deuxième section (Flex Items Properties) */
-
-/* Conteneur de l'article (Flex Items Header) */
 #flex-recap-table-container article {
     display: flex;
     justify-content: space-between;
@@ -101,7 +86,7 @@
     background-color: #CC0033;
     color: white;
     padding: 10px;
-    margin-top: 20px; /* Séparer du premier tableau */
+    margin-top: 20px; 
 }
 
 #flex-recap-table-container .droite2 {
@@ -134,7 +119,6 @@
     display: inline;
 }
 
-/* Style de la deuxième table (Items Table) */
 #flex-recap-table-container .table-flex-items {
     padding-bottom: 1px;
 }

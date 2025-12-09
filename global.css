@@ -1,10 +1,5 @@
-/* Importation de la police Poppins depuis Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* Style pour le retour en haut (si réactivé un jour) */
-/* html { scroll-behavior: smooth; } */
-
-/* RESET DE BASE */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,13 +9,9 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4; /* Fond blanc cassé */
-    color: #333; /* Texte gris foncé */
+    background-color: #f4f4f4;
+    color: #333;
 }
-
-/* ---------------------------------------------------- */
-/* 🧭 HEADER & NAVIGATION */
-/* ---------------------------------------------------- */
 
 header {
     background-color: #1a1a1a;
@@ -61,10 +52,6 @@ header {
     border-radius: 4px;
 }
 
-/* ---------------------------------------------------- */
-/* 🖼️ SECTION HERO (Accueil) */
-/* ---------------------------------------------------- */
-
 .hero {
     display: flex;
     align-items: center;
@@ -75,8 +62,8 @@ header {
 }
 
 .hero-text {
-    flex: 1; /* Rétablis à flex: 1 */
-    max-width: 50%; /* Rétablis à max-width: 50% */
+    flex: 1; 
+    max-width: 50%; 
 }
 
 .hero-image {
@@ -98,7 +85,6 @@ header {
     margin-bottom: 10px;
 }
 
-/* Logos */
 .hero-logos {
     margin-top: 30px;
     display: flex;
@@ -111,25 +97,17 @@ header {
     display: block; 
 }
 
-/* Le style spécifique au JS doit être dans une classe */
-/* .logo-item#js { width: 130px; } */ 
-/* Mieux : Utilisez la classe directement sur l'image JS si vous le faites en HTML */
-
-
-/* ---------------------------------------------------- */
-/* 🎠 CARROUSEL TP (Scroll Horizontal) - VERSION COUPÉE ET ESPACÉE */
-/* ---------------------------------------------------- */
 
 .tp-section {
     padding: 40px 0;
-    max-width: 1400px; /* RETOUR À LA LARGEUR LIMITÉE pour garantir le défilement */
+    max-width: 1400px; 
     margin: 0 auto;
 }
 
 .tp-list-container {
-    overflow-x: auto; /* Permet le défilement horizontal */
-    padding: 20px 40px; /* Rétablissement du PADDING INITIAL à 40px */
-    white-space: nowrap; /* Empêche les éléments de passer à la ligne */
+    overflow-x: auto; 
+    padding: 20px 40px; 
+    white-space: nowrap; 
     scroll-snap-type: x mandatory; 
 }
 
@@ -159,22 +137,20 @@ header {
     color: #1a1a1a;
 }
 
-.tp-item p { /* Correction du texte qui dépassait */
+.tp-item p { 
     white-space: normal; 
     margin-top: 5px;
     font-size: 0.9em;
 }
 
-/* Cacher la scrollbar (optionnel pour un look plus propre) */
 .tp-list-container::-webkit-scrollbar {
     display: none;
 }
 .tp-list-container {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-/* Contrôles du Carrousel (Boutons Noirs) */
 .tp-carousel-controls {
     text-align: center;
     margin-top: 25px;
@@ -182,8 +158,8 @@ header {
 }
 
 .tp-carousel-controls button {
-    background-color: #1a1a1a; /* Fond du bouton : Noir */
-    color: white; /* Texte : Blanc */
+    background-color: #1a1a1a; 
+    color: white; 
     border: none;
     padding: 10px 15px;
     margin: 10px;
@@ -199,10 +175,6 @@ header {
 }
 
 
-/* ---------------------------------------------------- */
-/* 🦶 FOOTER */
-/* ---------------------------------------------------- */
-
 footer {
     background-color: #1a1a1a;
     color: white;
@@ -213,10 +185,6 @@ footer {
     align-items: center;
 }
 
-
-/* ---------------------------------------------------- */
-/* 📄 STYLES SPÉCIFIQUES AUX PAGES D'EXERCICES */
-/* ---------------------------------------------------- */
 
 .exo-step {
     padding: 60px 0;
@@ -256,8 +224,8 @@ footer {
 }
 
 .theme-light .exo-analysis {
-    background-color: #ffffff; /* BLANC PUR (comme les cartes du carrousel) */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Ajoute une très légère ombre pour le faire ressortir */
+    background-color: #ffffff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
 }
 .theme-dark .exo-analysis {
     background-color: #333; 
@@ -277,11 +245,6 @@ footer {
 }
 
 
-/* ---------------------------------------------------- */
-/* 📱 RESPONSIVE DESIGN - MEDIA QUERIES */
-/* ---------------------------------------------------- */
-
-/* --- TABLETTE (Max 768px) --- */
 @media screen and (max-width: 768px) {
     
     header {
@@ -311,7 +274,7 @@ footer {
     }
 
     .tp-list-container {
-        padding: 20px 20px; /* Ajuste le padding sur tablette */
+        padding: 20px 20px; 
     }
 
     footer {
@@ -326,7 +289,6 @@ footer {
 }
 
 
-/* --- SMARTPHONE (Max 500px) --- */
 @media screen and (max-width: 500px) {
 
     h1 {

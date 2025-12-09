@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP 7 - Canvas et Dessin Vectoriel</title>
+    <title>TP 7 - Canvas dessins</title>
     
     <link rel="stylesheet" href="../global.css">  
     <link rel="stylesheet" href="../tp7/tp7.css">
 </head>
 <body>
-    
     <header>
         <div class="brand">
             <a href="../index.html">Lilian.Wojeik</a>
@@ -45,9 +44,9 @@
 
                 <div class="exo-analysis">
                     <h3>Analyse & Commentaires</h3>
-                    <p>Cet exercice est fondamental car il constitue une initiation complète à l'API **HTML Canvas**, le moteur de dessin vectoriel par excellence côté client. La difficulté principale réside dans la maîtrise de la **logique mathématique et géométrique** requise pour chaque figure (calcul de boucles, manipulation des arcs et des chemins). La gestion du bouton de navigation illustre comment **JavaScript** interagit avec le Canvas pour le **rafraîchissement (`clearRect`)** et le contrôle d'état (boucle séquentielle).</p>
+                    <p>Cet exercice a été de loin le plus compliqué de la série sur Canvas. Il impliquait de réaliser trop de formes différentes (rectangles, polygones, chemins complexes, etc.), ce qui augmentait considérablement la difficulté à cause de la nécessité de maîtriser les coordonnées exactes ($x, y$) et les fonctions de tracé (lineTo, bezierCurveTo). J'ai très peu apprécié cet exercice à cause de la difficulté. Les seules formes qui restaient abordables étaient le damier et le cercle, cette dernière étant la forme la plus simple à reproduire sur Canvas. Le reste des tracés était très dur et a exigé beaucoup de temps et de précision.</p>
 
-                    <h4>Niveau de Difficulté : 4/5 ⭐⭐⭐⭐</h4>
+                    <h4>Niveau de Difficulté : 5/5 ⭐⭐⭐⭐⭐</h4>
                     <div class="difficulty-indicator">
                         <div class="level level-4"></div>
                     </div>
@@ -69,9 +68,9 @@
 
                 <div class="exo-analysis">
                     <h3>Analyse & Commentaires</h3>
-                    <p>Cet exercice combine le dessin de figures (arcs, cercles) avec la mise en œuvre de la **boucle de rendu** d'animation (`requestAnimationFrame`). La principale difficulté réside dans le calcul des angles de l'arc de Pac-Man, qui doivent être dynamiques (`mouthAngle`) et synchronisés pour simuler l'ouverture/fermeture de la bouche de manière fluide. Ceci démontre la capacité à gérer l'état d'un objet (`mouthOpenness`) dans le temps pour créer un mouvement crédible.</p>
+                    <p>Cet exercice a constitué une bonne introduction à la méthode Canvas en JavaScript. L'API Canvas n'est pas facile du tout, car elle demande une approche de dessin programmatique basée sur les coordonnées ($x, y$) et les fonctions (beginPath(), arc(), lineTo(), etc.), ce qui est très différent du CSS. Le fait que le personnage principal soit essentiellement composé de cercles (arc()) m'a grandement aidé à appréhender les bases. Je suis content d'avoir réussi à reproduire ce dessin, mais la méthode Canvas reste très dure et demande beaucoup plus de pratique pour être maîtrisée sur des formes complexes.</p>
 
-                    <h4>Niveau de Difficulté : 3/5 ⭐⭐⭐</h4>
+                    <h4>Niveau de Difficulté : 4/5 ⭐⭐⭐⭐</h4>
                     <div class="difficulty-indicator">
                         <div class="level level-3"></div>
                     </div>
@@ -84,13 +83,13 @@
             <h2 style="padding-left: 40px; margin-bottom: 20px;">Mes autres Travaux Pratiques</h2>
             
             <div class="tp-list-container" id="tpCarouselPage">
-                <a href="../tp1/tp1.html" class="tp-item"><h3>TP 1</h3><p>Tableau Flexbox récapitulatif.</p><p>2 Exercices</p></a>
-                <a href="../tp2/tp2.html" class="tp-item"><h3>TP 2</h3><p>Gestion des formulaires et des médias.</p><p>2 Exercices</p></a>
-                <a href="../tp3/tp3.html" class="tp-item"><h3>TP 3</h3><p>Initiation au positionnement CSS.</p><p>2 Exercices</p></a>
-                <a href="../tp4/tp4.html" class="tp-item"><h3>TP 4</h3><p>Maîtrise de Flexbox (Layout 1).</p><p>2 Exercices</p></a>
-                <a href="../tp5/tp5.html" class="tp-item"><h3>TP 5</h3><p>CSS Grid (Layout 2).</p><p>2 Exercices (Imposé)</p></a>
-                <a href="../tp6/tp6.html" class="tp-item tp-impose"><h3>TP 6 - Imposé</h3><p>Exercice de synthèse et Responsivité.</p><p>2 Exercices</p></a>
-                <a href="../tp8/tp8.html" class="tp-item"><h3>TP 8</h3><p>Initiation au JavaScript vanilla.</p><p>2 Exercices</p></a>
+                <a href="../tp1/tp1.html" class="tp-item"><h3>TP 1</h3><p>Tableau Flexbox</p><p>2 Exercices</p></a>
+                <a href="../tp2/tp2.html" class="tp-item"><h3>TP 2</h3><p>Tableau Grid</p><p>2 Exercices</p></a>
+                <a href="../tp3/tp3.css" class="tp-item"><h3>TP 3</h3><p>Responsive</p><p>2 Exercices</p></a>
+                <a href="../tp4/tp4.html" class="tp-item"><h3>TP 4</h3><p>Sélecteurs</p><p>2 Exercices</p></a>
+                <a href="../tp5/tp5.html" class="tp-item"><h3>TP 5</h3><p>Parallaxe</p><p>2 Exercices</p></a>
+                <a href="../tp6/tp6.html" class="tp-item"><h3>TP 6</h3><p>Animation CSS</p><p>2 Exercices</p></a>
+                <a href="../tp8/tp8.html" class="tp-item"><h3>TP 8</h3><p>Canvas position</p><p>2 Exercices</p></a>
             </div>
             
             <div class="tp-carousel-controls">

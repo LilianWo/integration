@@ -22,7 +22,6 @@
 }
 
 .exo-render.exo-border-container {
-    /* La bordure bleue pointillée que vous voulez */
     border: 3px dashed #3498db; 
     margin: 20px;
     padding: 20px;
@@ -30,13 +29,12 @@
     background-color: white; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     
-    /* Conserver la position relative pour l'Exercice 1 (Centrage Absolu) */
     position: relative; 
     overflow: hidden; 
 }
 
 .consigne-exo1 {
-    text-align: center; /* Centrer le texte */
+    text-align: center; 
     font-size: 16px;
     font-weight: 600;
     color: black;
@@ -54,18 +52,12 @@
     margin-bottom: 5px;
 }
 
-/* ==================================================================== */
-/* --- EXERCICE 2 : Mise en page Responsive (SÉLECTEURS ISOLÉS) --- */
-/* ==================================================================== */
-
-/* Cibler le conteneur principal de la démo Grid pour les styles généraux */
 .exo-render .container-grid-demo {
     width: 100%;
 }
 
-/* Styles pour le HEADER Jaune */
 .exo-render .container-grid-demo header {
-    background-color: #FFFF00; /* Jaune vif */
+    background-color: #FFFF00; 
     z-index: 0;
     color: #000;
     border-radius: 10px;
@@ -77,39 +69,35 @@
     font-weight: bold;
 }
 
-/* Styles pour le MAIN (Conteneur Grid) */
 .exo-render .container-grid-demo main {
     display: grid;
-    grid-template-columns: 1fr; /* Défaut : 1 colonne (Mobile First) */
+    grid-template-columns: 1fr; 
     gap: 15px;
     margin: 5px 0;
 }
 
-/* Styles pour les ARTICLES Cyan */
 .exo-render .container-grid-demo article {
-    background-color: #00FFFF; /* Cyan */
+    background-color: #00FFFF; 
     border-radius: 10px;
     border: solid 1px #CCCCCC;
     padding: 15px;
     color: #000;
 }
 
-/* Styles pour le FOOTER Orange */
 .exo-render .container-grid-demo footer {
-    background-color: #FFA500; /* Orange */
+    background-color: #FFA500; 
     border-radius: 10px;
     border: solid 1px #CCCCCC;
     display: flex;
     flex-direction: column;
     margin-top: 15px;
     padding: 10px;
-    gap: 10px; /* Écart entre les divs magenta */
+    gap: 10px; 
     box-sizing: border-box;
 }
 
-/* Styles pour les DIVS Magenta du Footer */
 .exo-render .container-grid-demo footer div {
-    background-color: #FF00FF; /* Magenta */
+    background-color: #FF00FF; 
     color: white;
     border-radius: 10px;
     border: solid 1px #CCCCCC;
@@ -118,10 +106,9 @@
     font-weight: bold;
 }
 .exo-render .container-grid-demo footer .pied-droite {
-    display : none; /* Par défaut : Masqué */
+    display : none; 
 }
 
-/* --- Media Query : >= 650px (2 colonnes) --- */
 @media screen and (min-width: 650px) {
 
     .exo-render .container-grid-demo main {
@@ -139,7 +126,6 @@
     }
 }
 
-/* --- Media Query : >= 960px (3 colonnes et Footer en Ligne) --- */
 @media screen and (min-width: 960px) {
 
     .exo-render .container-grid-demo main {
@@ -147,27 +133,22 @@
     }
 
     .exo-render .container-grid-demo footer {
-        flex-direction: row; /* Footer en ligne */
+        flex-direction: row; 
         justify-content: space-around; 
         align-items: stretch;
-        gap: 10px; /* Assurez l'écart entre les blocs magenta */
+        gap: 10px; 
     }
 
-    /* Styles pour les DIVS Magenta du Footer (Contrôle de la largeur) */
     .exo-render .container-grid-demo footer div {
-        /* RETIRE flex-basis: 48% et width: auto; pour laisser flex-grow gérer */
         flex-basis: auto; 
         width: auto;
     }
 
-    /* MODIFICATION DEMANDÉE : Rendre le bloc de gauche (pied-gauche) plus grand */
     .exo-render .container-grid-demo footer .pied-gauche {
-        flex-grow: 2; /* Prend deux fois plus d'espace que le bloc de droite */
+        flex-grow: 2; 
     }
 
-    /* Rendre le bloc de droite (pied-droite) plus petit */
     .exo-render .container-grid-demo footer .pied-droite {
-        flex-grow: 1; /* Prend une seule part de l'espace disponible */
+        flex-grow: 1; 
     }
 }
-

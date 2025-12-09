@@ -1,13 +1,7 @@
-/* ========================================================= */
-/* --- STYLES TP 7 (Minimal pour le rendu de l'Exercice 1) --- */
-/* ========================================================= */
-
 #canvas_unique {
-    /* Fond du Canvas pour un bon contraste avec les dessins */
-    /* Bordure pour délimiter clairement le Canvas */
     border: 1px dashed #333; 
     display: block; 
-    margin: 15px auto; /* Centrage et marge */
+    margin: 15px auto; 
 }
 
 #nextFigureBtn {
@@ -15,43 +9,32 @@
     font-size: 16px; 
     cursor: pointer;
     border: none;
-    background-color: #333; /* CHANGEMENT: Fond noir/gris foncé */
+    background-color: #333; 
     color: white;
     border-radius: 5px;
-    /* Ajout d'une transition pour un effet de survol agréable */
     transition: background-color 0.3s ease; 
 }
 
-/* Ajout d'un effet de survol pour l'interactivité */
 #nextFigureBtn:hover {
     background-color: #555;
 }
 
-/* ========================================================================= */
-/* --- COHÉRENCE DU CADRE (Bordure en pointillés bleus) --- */
-/* ========================================================================= */
-
 #exo1_canvas_container {
-    /* Style de bordure emprunté à #exo1_container du TP4 */
     border: 2px dashed #3498db; 
-    padding: 15px; /* Marge interne pour séparer le canvas de la bordure */
-    margin: 20px auto; /* Marge externe pour séparer le cadre du titre */
-    background-color: white; /* Assurer un fond blanc dans la zone bordurée */
+    padding: 15px; 
+    margin: 20px auto; 
+    background-color: white; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    text-align: center; /* Assurer que le canvas et le bouton restent centrés */
+    text-align: center; 
 }
-
-/* ========================================================================= */
-/* --- CADRE EXO 2 : Bordure en pointillés clairs sur fond sombre --- */
-/* ========================================================================= */
 
 #exo2_animation_container {
     border: 2px dashed #3498db; 
-    padding: 15px; /* Marge interne pour séparer le canvas de la bordure */
-    margin: 20px auto; /* Marge externe pour séparer le cadre du titre */
-    background-color: white; /* Assurer un fond blanc dans la zone bordurée */
+    padding: 15px; 
+    margin: 20px auto; 
+    background-color: white; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    text-align: center; /* Assurer que le canvas et le bouton restent centrés */
+    text-align: center; 
 }
 
 .exo-analysis {
@@ -63,4 +46,9 @@
 .exo-analysis h4 {
     margin-top: auto;
     margin-bottom: 5px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
