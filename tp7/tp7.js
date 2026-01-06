@@ -40,63 +40,61 @@ function drawTarget() {
     }
 }
 
-
 function drawChicken() {
     clearCanvas();
-    const PADDING = 20; 
-    ctx.strokeStyle = 'black';
-    ctx.lineWidth = 2;
-    
-    const GRID_UNIT_SIZE = 9; 
-    const CHICKEN_WIDTH = GRID_UNIT_SIZE * gridUnit;
-    const CHICKEN_HEIGHT = 8 * gridUnit; 
-    
-    const W_PADDED = W - 2 * PADDING;
-    const H_PADDED = H - 2 * PADDING;
+    const gridUnit = W / 10; 
 
-    const offsetX = PADDING + (W_PADDED - CHICKEN_WIDTH) / 2;
-    const offsetY = PADDING + (H_PADDED - CHICKEN_HEIGHT) / 2;
+    ctx.strokeStyle = '#e0e0e0';
+    ctx.lineWidth = 1;
+    for (let i = 0; i <= 10; i++) {
+        ctx.beginPath(); ctx.moveTo(i * gridUnit, 0); ctx.lineTo(i * gridUnit, H); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(0, i * gridUnit); ctx.lineTo(W, i * gridUnit); ctx.stroke();
+    }
+
+    ctx.strokeStyle = 'black';
+    ctx.lineWidth = 3;
+    ctx.lineJoin = 'miter';
+    ctx.lineCap = 'round';
 
     const points = [
-        [2, 3], 
-        [1, 4], [1, 5], [2, 6], [4, 7], [6, 7], [7, 6], [8, 6], 
-        [9, 5], [8, 4], [7, 5], [5, 5], [3, 4], 
-        [2, 3], 
-        
-        [3, 3], 
-        [3, 2], [4, 1], [5, 2], [5, 3], 
-        
-        [7, 5], 
-        [7, 6], [8, 5], 
-        
-        [4, 7], 
-        [4, 8], [3, 8], [5, 8], 
-        
-        [6, 7], 
-        [6, 8], [7, 8], [5, 8] 
+        [2, 2], [3, 2], 
+        [3, 1.5], [3.25, 1.75], [3.5, 1.5], [3.75, 1.75], [4, 1.5], [4, 2],
+        [5, 3], [7, 3],
+        [8, 2], [8, 3], [9, 3], [8, 4], [9, 4], 
+        [7, 6], [5, 6], [4, 5], [4, 4], [3, 3], [2, 2],
+
+        null, [5, 6], [5, 7], 
+        null, [5, 7], [4.2, 7], 
+        null, [5, 7], [4.5, 7.5], 
+        null, [5, 7], [5, 7.5], 
+
+        null, [7, 6], [7, 7], 
+        null, [7, 7], [6.2, 7], 
+        null, [7, 7], [6.5, 7.5], 
+        null, [7, 7], [7, 7.5]
     ];
-    
+
     ctx.beginPath();
-    ctx.lineJoin = 'round';
-
-    points.forEach(([x, y], index) => {
-        const px = x * gridUnit + offsetX;
-        const py = y * gridUnit + offsetY;
-
-        if (index === 0 || index === 14 || index === 19 || index === 22 || index === 26) {
-            ctx.moveTo(px, py);
-        } else {
-            ctx.lineTo(px, py);
-        }
+    let isNewPath = true;
+    points.forEach((p) => {
+        if (p === null) { isNewPath = true; return; }
+        const px = p[0] * gridUnit;
+        const py = p[1] * gridUnit;
+        if (isNewPath) { ctx.moveTo(px, py); isNewPath = false; }
+        else { ctx.lineTo(px, py); }
     });
-    
     ctx.stroke();
-    
+
+    ctx.beginPath();
+    ctx.moveTo(2 * gridUnit, 2 * gridUnit); ctx.lineTo(3 * gridUnit, 2 * gridUnit);
+    ctx.moveTo(3 * gridUnit, 2 * gridUnit); ctx.lineTo(3 * gridUnit, 3 * gridUnit);
+    ctx.moveTo(3 * gridUnit, 2 * gridUnit); ctx.lineTo(4 * gridUnit, 2 * gridUnit);
+    ctx.stroke();
+
     ctx.fillStyle = 'black';
     ctx.beginPath();
-    ctx.arc(3 * gridUnit + offsetX, 4 * gridUnit + offsetY, 2, 0, Math.PI * 2); 
+    ctx.arc(3.3 * gridUnit, 2.4 * gridUnit, gridUnit * 0.08, 0, Math.PI * 2);
     ctx.fill();
-    ctx.closePath();
 }
 
 function drawCheckerboard() {
@@ -122,7 +120,7 @@ function drawCurveQuadrillage() {
     ctx.lineWidth = 1;
 
     const gridSize = Math.min(W, H) - 2 * PADDING; 
-    const numLines = 20; 
+    const numLines = 40; 
     
     const offsetX = PADDING; 
     const offsetY = PADDING;
@@ -130,17 +128,16 @@ function drawCurveQuadrillage() {
     for (let i = 0; i <= numLines; i++) {
         const ratio = i / numLines;
         
-        const startX = offsetX + (gridSize * ratio);
-        const startY = offsetY + gridSize; 
+        const startX = offsetX; 
+        const startY = offsetY + (gridSize * ratio); 
         
-        const endX = offsetX; 
-        const endY = offsetY + (gridSize * (1 - ratio));
+        const endX = offsetX + (gridSize * ratio); 
+        const endY = offsetY + gridSize;
 
         ctx.beginPath();
         ctx.moveTo(startX, startY);
         ctx.lineTo(endX, endY);
         ctx.stroke();
-        ctx.closePath();
     }
 
     for (let i = 0; i <= numLines; i++) {
@@ -150,14 +147,15 @@ function drawCurveQuadrillage() {
         const startY = offsetY; 
         
         const endX = offsetX + gridSize; 
-        const endY = offsetY + (gridSize * (1 - ratio));
+        const endY = offsetY + (gridSize * ratio);
 
         ctx.beginPath();
         ctx.moveTo(startX, startY);
         ctx.lineTo(endX, endY);
         ctx.stroke();
-        ctx.closePath();
     }
+    
+    ctx.strokeRect(offsetX, offsetY, gridSize, gridSize);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -200,7 +198,7 @@ function drawPacManStatic(ctx, W, H) {
     const mouthOpenAngle = -0.070; 
     
     const startAngle = (0.25 + mouthOpenAngle) * Math.PI; 
-    const endAngle = (1.75 - mouthOpenAngle) * Math.PI;   
+    const endAngle = (1.75 - mouthOpenAngle) * Math.PI;   
 
     ctx.beginPath();
     ctx.arc(centerX, centerY, radius, startAngle, endAngle, false);
